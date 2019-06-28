@@ -55,3 +55,8 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+Note to self:
+Couldn't add comments to json file so just in case this doesn't run
+In "clean-css-promise", "clean-css": "^3.4.5", and in "clean-css", "version": "3.4.28",
