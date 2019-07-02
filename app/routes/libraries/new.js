@@ -6,6 +6,22 @@ export default Route.extend({
     return this.store.createRecord('library');
   },
 
+  //set controller params in a route
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Create a new library');
+    controller.set('buttonLabel', 'Create');
+  },
+
+  //for setting a non-default template location
+  //like by default this would go to edit.hbs and new.hbs
+  //but since we changed it to form.hbs,
+  //we want it to go there instead
+  renderTemplate() {
+    this.render('libraries/form');
+  },
+
   actions: {
 
     saveLibrary(newLibrary) {
