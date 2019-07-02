@@ -9,6 +9,7 @@ export default Route.extend({
   actions: {
 
     saveLibrary(newLibrary) {
+      //newLibrary is a variable and in this case it's a model (check template)
         //transitionTo basically redirects the page to a certain target page
         //so 'libraries' goes back to localhost:4200/libraries
         newLibrary.save().then(() => this.transitionTo('libraries'));

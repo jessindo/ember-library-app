@@ -8,17 +8,18 @@ export default Route.extend({
     actions: {
         saveMessage(){
             const controller = this.get('controller');
-
-            alert(`Email address:  ${controller.get('model.email')} and text message: ${controller.get('model.message')}`);
-            controller.set('responseMessage', 'We got your message and will get in touch soon');
-
-            const email = controller.get('model.email');
-            const message = controller.get('model.message');
-
-            const newContact = this.store.createRecord('contact', {email, message});
             
-            newContact.save().then(response => {
-                this.set('responseMessage', 'We got your message and will get in touch soon');
+            alert(`Email address:  ${controller.get('model.email')} and text message: ${controller.get('model.message')}`);
+            //controller.set('responseMessage', 'We got your message and will get in touch soon');
+
+            // const email = controller.get('model.email');
+            // const message = controller.get('model.message');
+
+            // const newContact = this.store.createRecord('contact', {email, message});
+            
+            //controller.get used to be newContact.save()......
+            controller.get('model').save().then(response => {
+                controller.set('responseMessage', 'We got your message and will get in touch soon');
             });
         },
 
